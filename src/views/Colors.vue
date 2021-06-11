@@ -18,6 +18,8 @@
                     <input
                         type="text"
                         maxlength="20"
+                        @click="copy"
+                        data-type="hex"
                         placeholder="hex"
                         class="item"
                         :value="hex"
@@ -25,6 +27,8 @@
                     <input
                         type="text"
                         maxlength="20"
+                        @click="copy"
+                        data-type="rgb"
                         placeholder="rgb"
                         class="item"
                         :value="rgb"
@@ -32,6 +36,8 @@
                     <input
                         type="text"
                         maxlength="20"
+                        @click="copy"
+                        data-type="hsl"
                         placeholder="hsl"
                         class="item"
                         :value="hsl"
@@ -39,6 +45,8 @@
                     <input
                         type="text"
                         maxlength="20"
+                        @click="copy"
+                        data-type="hwb"
                         placeholder="hwb"
                         class="item"
                         :value="hwb"
@@ -46,6 +54,8 @@
                     <input
                         type="text"
                         maxlength="20"
+                        @click="copy"
+                        data-type="keyword"
                         placeholder="keyword"
                         class="item"
                         :value="keyword"
@@ -59,6 +69,7 @@
 <script>
 import { Toast } from "fvmu";
 import colorString from 'color-string';
+import copy from 'copy-to-clipboard';
 
 export default {
     data () {
@@ -121,6 +132,16 @@ export default {
             }
 
             this.output = md5.update(input).digest('hex');
+        },
+        copy (e) {
+            let { type } = e.currentTarget.dataset;
+            let txt = this[type];
+
+            try {
+                if (txt && copy(txt)) {
+                    Toast.open('复制成功~');
+                }
+            } catch (e) { }
         }
     },
 }

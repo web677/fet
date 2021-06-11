@@ -25,9 +25,9 @@ export default new Router({
             component: () => import('./views/Colors.vue')
         },
         {
-            path: '/Formator',
-            name: 'Formator',
-            component: () => import('./views/Formator.vue')
+            path: '/Sites',
+            name: 'Sites',
+            component: () => import('./views/Sites.vue')
         }
     ]
 })
