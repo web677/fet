@@ -136,7 +136,7 @@ export default {
             actionList: [
                 { name: "compress", type: 0, txt: "TinyPng压缩" },
                 { name: "tobase64", type: 1, txt: "图片转Base64" },
-                { name: "compresstobase64", type: 2, txt: "压缩后转Base64" },
+                { name: "compresstobase64", type: 2, txt: "压缩并转为Base64" },
             ],
             tinyResult: [],
             base64Result: {
@@ -269,7 +269,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .page {
     background: #fff;
     // background: url("~@assets/images/body-bg.png") no-repeat center center /
