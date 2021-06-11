@@ -1,11 +1,11 @@
 <template>
-    <div id="app">
+    <div class="container">
         <div class="header"></div>
         <ul class="nav">
             <router-link class="nav-item" to="/Tiny">TinyPng</router-link>
-            <router-link class="nav-item" to="/ToBase64">编码转换</router-link>
-            <router-link class="nav-item" to="/ToBase64">色值转换</router-link>
-            <router-link class="nav-item" to="/ToBase64"
+            <router-link class="nav-item" to="/Converter">编码转换</router-link>
+            <router-link class="nav-item" to="/Colors">色值转换</router-link>
+            <router-link class="nav-item" to="/Formator"
                 >代码格式化</router-link
             >
         </ul>
@@ -15,6 +15,18 @@
 
 <script>
 export default {};
+document.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+});
+document.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+});
+document.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
+document.addEventListener("drop", (e) => {
+    e.preventDefault();
+});
 </script>
 <style lang="less">
 @import "../public/base.css";
@@ -25,7 +37,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#app{
+.container {
     width: 100%;
     height: 100%;
 }

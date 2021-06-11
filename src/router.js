@@ -5,24 +5,29 @@ import Tiny from './views/Tiny.vue'
 Vue.use(Router)
 
 export default new Router({
-    linkExactActiveClass: 'cur',
+    linkActiveClass: 'cur',
     routes: [
         {
             path: '/',
-            name: 'Tiny',
             component: Tiny
         }, {
             path: '/Tiny',
-            name: 'Tiny',
             component: Tiny
         },
         {
-            path: '/ToBase64',
-            name: 'ToBase64',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "about" */ './views/ToBase64.vue')
+            path: '/Converter',
+            name: 'Converter',
+            component: () => import('./views/Converter.vue')
+        },
+        {
+            path: '/Colors',
+            name: 'Colors',
+            component: () => import('./views/Colors.vue')
+        },
+        {
+            path: '/Formator',
+            name: 'Formator',
+            component: () => import('./views/Formator.vue')
         }
     ]
 })
