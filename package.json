@@ -1,46 +1,48 @@
 {
-  "name": "fet",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
-  },
-  "main": "background.js",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "color-string": "^1.5.5",
-    "copy-to-clipboard": "^3.3.1",
-    "core-js": "^2.6.5",
-    "fvmu": "^0.2.6",
-    "tinify": "^1.6.0-beta.2",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.12.0",
-    "@vue/cli-service": "^4.5.13",
-    "babel-plugin-component": "^1.1.1",
-    "electron": "^13.1.1",
-    "electron-devtools-installer": "^3.1.0",
-    "less": "^3.0.4",
-    "less-loader": "^5.0.0",
-    "vue-cli-plugin-electron-builder": "^2.0.0-rc.5",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.3.1"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "name": "fet",
+    "version": "0.1.0",
+    "private": true,
+    "description": "图片压缩小工具",
+    "author": "imaopao.cn",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "electron:build": "vue-cli-service electron:build",
+        "electron:serve": "vue-cli-service electron:serve",
+        "postinstall": "electron-builder install-app-deps",
+        "postuninstall": "electron-builder install-app-deps"
+    },
+    "main": "background.js",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "color-string": "^1.5.5",
+        "copy-to-clipboard": "^3.3.1",
+        "core-js": "^2.6.5",
+        "fvmu": "^0.2.6",
+        "tinify": "^1.6.0-beta.2",
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.3"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.12.0",
+        "@vue/cli-service": "^4.5.13",
+        "babel-plugin-component": "^1.1.1",
+        "electron": "^13.1.1",
+        "electron-devtools-installer": "^3.1.0",
+        "less": "^3.0.4",
+        "less-loader": "^5.0.0",
+        "vue-cli-plugin-electron-builder": "^2.0.0-rc.5",
+        "vue-template-compiler": "^2.6.10",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^4.3.1"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
 }

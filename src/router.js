@@ -9,7 +9,7 @@ export default new Router({
     routes: [
         {
             path: '/',
-            component: Tiny
+            redirect: '/Tiny'
         }, {
             path: '/Tiny',
             component: Tiny

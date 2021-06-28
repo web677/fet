@@ -5,6 +5,10 @@ const CONFIG = require('../config/common')
 
 tinify.key = CONFIG.tinypng.key
 
+const SUPPORT = {
+    tiny: /\.(png|jpg|jpeg)$/,
+    base64: /\.(png|jpg|gif|jpeg|webp)$/
+}
 
 export async function compress (files) {
     let result = {
@@ -35,6 +39,17 @@ export async function compress (files) {
                 size_origin: file.size,
                 size: file.size,
                 info: '非图片格式'
+            })
+            continue;
+        }
+        if (!(SUPPORT.tiny.test(file.name))) {
+            list.push({
+                status: 0,
+                name: file.name,
+                type: file.type,
+                size_origin: file.size,
+                size: file.size,
+                info: '不支持的图片格式'
             })
             continue;
         }
@@ -94,6 +109,14 @@ export async function toBase64 (image) {
         }
     }
 
+    if (!(SUPPORT.base64.test(image.name))) {
+        return {
+            code: 1003,
+            message: '不支持的图片格式文件哦',
+            data: {}
+        }
+    }
+
     let filePath = image.path,
         fileName = image.name,
         imgType = _getImageType(fileName);
@@ -102,7 +125,7 @@ export async function toBase64 (image) {
 
     if (!buffer) {
         return {
-            code: 1003,
+            code: 1004,
             message: '图片读取失败~',
             data: {}
         }
@@ -127,8 +150,7 @@ function _mkdirSync (path) {
 }
 
 function _getImageType (str) {
-    var reg = /\.(png|jpg|gif|jpeg|webp)$/;
-    return str.match(reg)[1];
+    return str.match(SUPPORT.base64)[1];
 }
 
 // 计算base64字符串大小

@@ -5,7 +5,7 @@
             <router-link class="nav-item" to="/Tiny">TinyPng</router-link>
             <router-link class="nav-item" to="/Converter">编码转换</router-link>
             <router-link class="nav-item" to="/Colors">色值转换</router-link>
-            <router-link class="nav-item" to="/Sites">网站导航</router-link>
+            <!-- <router-link class="nav-item" to="/Sites">网站导航</router-link> -->
         </ul>
         <router-view id="J_main_webview" class="main-webview" />
     </div>

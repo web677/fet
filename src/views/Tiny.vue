@@ -222,12 +222,13 @@ export default {
                         return Toast.open(res.message)
                     }
 
+
                     this.tinyResult = res.data.list;
                     resolve();
-                }).catch(() => {
+                }).catch((e) => {
                     this.state = "resolve";
                     reject({
-                        code: 1004,
+                        code: 2001,
                         message: '图片压缩失败~'
                     });
                 })
@@ -244,7 +245,7 @@ export default {
                     value: data.value,
                     size: data.size
                 }
-            }).catch(() => {
+            }).catch((e) => {
                 this.state = "resolve";
             })
         },

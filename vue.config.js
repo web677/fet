@@ -10,7 +10,15 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? 'https://static2.51fanli.net/mobile/personas/' : './',
     pluginOptions: {
         electronBuilder: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            builderOptions: {
+                mac: {
+                    "icon": "build/icon/icon.ico.png"
+                },
+                win: {
+                    "icon": "build/icon/icon.ico"
+                }
+            }
         }
     }
 }
