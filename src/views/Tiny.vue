@@ -222,7 +222,6 @@ export default {
                         return Toast.open(res.message)
                     }
 
-
                     this.tinyResult = res.data.list;
                     resolve();
                 }).catch((e) => {
