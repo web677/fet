@@ -245,6 +245,7 @@ export default {
                     size: data.size
                 }
             }).catch((e) => {
+                console.log(e)
                 this.state = "resolve";
             })
         },

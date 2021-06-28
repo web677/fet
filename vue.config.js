@@ -12,11 +12,16 @@ module.exports = {
         electronBuilder: {
             nodeIntegration: true,
             builderOptions: {
+                productName: "Fet",
+                appId: "fet.imaopao.cn",
+                dmg: {
+                    "icon": "build/icon/icon.ico.png"
+                },
                 mac: {
                     "icon": "build/icon/icon.ico.png"
                 },
                 win: {
-                    "icon": "build/icon/icon.ico"
+                    "icon": "build/icon/icon.ico.png"
                 }
             }
         }
