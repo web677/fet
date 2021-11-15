@@ -131,7 +131,7 @@ export async function toBase64 (image) {
         }
     }
 
-    let resStr = `data: image/${imgType};base64,${buffer.toString('base64')}`;
+    let resStr = `data:image/${imgType};base64,${buffer.toString('base64')}`;
 
     result.data = {
         value: resStr,
